@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="cnr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="description" content="Modni studio Sneža u Danilovgradu — frizerske usluge, njega kose i stil za svaki dan i posebne prilike. Kontaktirajte nas i zakažite svoj termin.">
+    <meta name="theme-color" content="#f7f1eb">
+
+
+    <title>Modni studio Sneža | Frizerski salon u Danilovgradu</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        :root {
+            --cream: #f7f1eb;
+            --paper: #fffdf9;
+            --rose: #c98783;
+            --rose-dark: #995d5b;
+            --ink: #302624;
+            --muted: #786b66;
+            --line: #e8dcd4;
+            --sage: #a5ad98;
+            --shadow: 0 18px 45px rgba(69, 43, 36, .10);
+            --serif: "Playfair Display", Georgia, serif;
+            --sans: "DM Sans", Arial, sans-serif;
+            --radius: 22px;
+            --container: 1160px;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: var(--paper);
+            font-family: var(--sans);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+
+        a {
+            color: inherit;
+        }
+
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--rose-dark);
+            outline-offset: 4px;
+        }
+
+
+        .container {
+            width: min(var(--container), calc(100% - 44px));
+            margin-inline: auto;
+        }
+
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--rose-dark);
+            font-size: .76rem;
+            font-weight: 700;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+        }
+
+
+        .eyebrow::before {
+            content: "";
+            width: 28px;
+            height: 1px;
+            background: currentColor;
+        }
+
+
+        h1, h2, h3, p {
+            margin-top: 0;
+        }
+
+
+        h1, h2, h3 {
+            font-family: var(--serif);
+            font-weight: 500;
+            line-height: 1.12;
+        }
+
+
+        h2 {
+            margin-bottom: 18px;
+            font-size: clamp(2.15rem, 4vw, 3.5rem);
+            letter-spacing: -.035em;
+        }
+
+
+        .section-intro {
+            max-width: 650px;
+            color: var(--muted);
+        }
+
+
+        .section-heading {
+            margin-bottom: 42px;
+        }
+
+
+        .section-heading.center {
+            text-align: center;
+        }
+
+
+        .section-heading.center .eyebrow {
+            justify-content: center;
+        }
+
+
+        .section-heading.center .section-intro {
+            margin-inline: auto;
+        }
+
+
+        .section {
+            padding: 100px 0;
+        }
+
+
+        /* Dugmad */
+        .button {
+            display: inline-flex;
+            min-height: 50px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 21px;
+            border: 1px solid transparent;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: .9rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform .2s ease, background .2s ease, border-color .2s ease;
+        }
+
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+
+        .button-primary {
+            color: white;
+            background: var(--ink);
+        }
+
+
+        .button-primary:hover {
+            background: var(--rose-dark);
+        }
+
+
+        .button-secondary {
+            border-color: #d7c5bc;
+            background: rgba(255, 255, 255, .45);
+        }
+
+
+        .button-secondary:hover {
+            border-color: var(--rose-dark);
+            background: white;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* Gornja navigacija */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 253, 249, .94);
+            border-bottom: 1px solid rgba(232, 220, 212, .8);
+            backdrop-filter: blur(14px);
+        }
+
+        .nav-wrap {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+
+        .brand-mark {
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--rose);
+            border-radius: 50%;
+            color: var(--rose-dark);
+            font-family: var(--serif);
+            font-size: 1.45rem;
+            font-style: italic;
+        }
+
+
+        .brand-copy {
+            display: grid;
+            line-height: 1.15;
+        }
+
+
+        .brand-copy strong {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        /* Skriveni meni po defaultu */
+        .nav-menu {
+          position: fixed;
+          left: -100%; 
+          top: 70px;
+          flex-direction: column;
+          background-color: #fff;
+          width: 100%;
+          text-align: center;
+          transition: 0.3s;
+        }
+
+
+        .brand-copy small {
+            margin-top: 5px;
+            color: var(--muted);
+            font-size: .62rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+
+
+        .nav-links {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            gap: clamp(14px, 2.2vw, 28px);
+        }
+
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: .86rem;
+            font-weight: 600;
+            transition: color .2s ease;
+        }
+
+
+        .nav-links a:hover {
+            color: var(--rose-dark);
+        }
+
+
+        .nav-links .nav-cta {
+            padding: 12px 18px;
+            color: white;
+            background: var(--ink);
+            border-radius: 999px;
+        }
+
+
+        .nav-links .nav-cta:hover {
+            color: white;
+            background: var(--rose-dark);
+        }
+        
+        
+        .logo {
+            width: 50px;
+            border-radius: 50%;
+        }
+        
+
+        .nav-pocetna, .nav-usluge, .nav-o-nama, .nav-galerija {
+            transition: background-color 0.1s ease;
+            padding: 10px 9px;
+            color: var(--rose-dark);
+            background: transparent;
+            border-radius: 999px;
+        }
+
+
+        .nav-pocetna.active, .nav-usluge.active, .nav-o-nama.active, .nav-galerija.active,
+        .nav-cta.active {
+            background-color: #e5c1c7;
+            border-radius: 6px;
+            color: white;
+            background: var(--rose);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            border-radius: 999px;
+        }
+
+
+        /* Uvodni ekran — sadrži lično predstavljanje i vodi ka sajtu */
+        .welcome {
+            position: relative;
+            min-height: min(760px, calc(100svh - 82px));
+            display: grid;
+            align-items: center;
+            overflow: hidden;
+            padding: 80px 0;
+            background: var(--cream);
+        }
+
+
+        .welcome::before {
+            content: "";
+            position: absolute;
+            width: 440px;
+            height: 440px;
+            top: -180px;
+            left: -150px;
+            border: 1px solid rgba(153, 93, 91, .18);
+            border-radius: 50%;
+            box-shadow: 0 0 0 35px rgba(153, 93, 91, .035), 0 0 0 70px rgba(153, 93, 91, .025);
+            pointer-events: none;
+        }
+
+
+        .welcome-grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr .85fr;
+            align-items: center;
+            gap: clamp(40px, 7vw, 90px);
+        }
+
+
+        .welcome-copy {
+            padding: 20px 0;
+        }
+
+
+        .welcome h1 {
+            max-width: 680px;
+            margin: 20px 0 24px;
+            font-size: clamp(3.3rem, 6.5vw, 6.1rem);
+            letter-spacing: -.06em;
+        }
+
+
+        .welcome h1 em {
+            color: var(--rose-dark);
+            font-weight: 400;
+        }
+
+
+        .welcome-copy > p {
+            max-width: 520px;
+            margin-bottom: 28px;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+
+        .welcome-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            align-items: center;
+        }
+
+
+        .welcome-note {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 28px;
+            color: var(--muted);
+            font-size: .82rem;
+        }
+
+
+        .welcome-note span:first-child {
+            color: var(--rose-dark);
+            letter-spacing: .12em;
+            font-size: 1rem;
+        }
+
+
+        .welcome-visual {
+            position: relative;
+            min-height: 500px;
+        }
+
+
+        .welcome-image {
+            position: absolute;
+            inset: 0 20px 0 25px;
+            overflow: hidden;
+            border-radius: 48% 48% 22px 22px;
+            background: #e8dcd4;
+            box-shadow: var(--shadow);
+        }
+
+
+        .welcome-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+
+        .welcome-stamp {
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            bottom: 35px;
+            width: 138px;
+            height: 138px;
+            display: grid;
+            align-content: center;
+            justify-items: center;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, .7);
+            border-radius: 50%;
+            color: var(--ink);
+            background: var(--paper);
+            box-shadow: var(--shadow);
+            transform: rotate(7deg);
+        }
+
+
+        .welcome-stamp strong {
+            font-family: var(--serif);
+            font-size: 1.9rem;
+            line-height: 1;
+        }
+
+
+        .welcome-stamp small {
+            max-width: 95px;
+            margin-top: 8px;
+            font-size: .62rem;
+            letter-spacing: .08em;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+
+        /* Traka sa glavnim prednostima */
+        .benefits {
+            padding: 25px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 13px;
+        }
+
+
+        .benefit-icon {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            border-radius: 50%;
+            color: var(--rose-dark);
+            background: var(--cream);
+            font-size: 1.15rem;
+        }
+
+
+        .benefit strong {
+            display: block;
+            font-family: var(--serif);
+            font-size: 1.03rem;
+            font-weight: 600;
+        }
+
+
+        .benefit small {
+            display: block;
+            color: var(--muted);
+            font-size: .76rem;
+        }
+
+
+        /* Usluge — kartice ostaju jednake širine */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            align-items: stretch;
+            gap: 22px;
+        }
+
+
+        .service-card {
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 30px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--paper);
+            transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+        }
+
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #d9b5ae;
+            box-shadow: var(--shadow);
+        }
+
+
+        .service-number {
+            display: inline-block;
+            margin-bottom: 22px;
+            color: var(--rose-dark);
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            font-style: italic;
+        }
+
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.48rem;
+            overflow-wrap: anywhere;
+        }
+
+
+        .service-card p {
+            margin-bottom: 0;
+            color: var(--muted);
+        }
+
+
+        .service-card .service-link {
+            margin-top: auto;
+            padding-top: 22px;
+            color: var(--rose-dark);
+            font-size: .88rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+
+        .service-card .service-link:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+
+        /* O salonu */
+        .about {
+            background: #f5eee8;
+        }
+
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: .9fr 1fr;
+            align-items: center;
+            gap: clamp(40px, 8vw, 100px);
+        }
+
+
+        .about-photo {
+            position: relative;
+            min-height: 440px;
+            margin-right: 12px;
+        }
+
+
+        .about-photo img {
+            width: 100%;
+            height: 440px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+
+        .photo-caption {
+            position: absolute;
+            right: -12px;
+            bottom: 25px;
+            max-width: 220px;
+            padding: 18px 20px;
+            border-radius: 16px;
+            background: var(--paper);
+            box-shadow: var(--shadow);
+            font-family: var(--serif);
+            font-size: 1.1rem;
+        }
+
+
+        .about-copy h2 {
+            margin-top: 18px;
+        }
+
+
+        .about-copy p {
+            color: var(--muted);
+        }
+
+
+        .about-list {
+            display: grid;
+            gap: 12px;
+            margin: 24px 0 30px;
+            padding: 0;
+            list-style: none;
+        }
+
+
+        .about-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            font-size: .93rem;
+        }
+
+
+        .about-list li::before {
+            content: "✓";
+            width: 23px;
+            height: 23px;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            border-radius: 50%;
+            color: var(--rose-dark);
+            background: #ead8d1;
+            font-size: .78rem;
+            font-weight: 700;
+        }
+
+
+        /* Cjenovnik */
+        .price-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px 34px;
+        }
+
+
+        .price-item {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+
+        .price-item h3 {
+            margin-bottom: 5px;
+            font-family: var(--sans);
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+
+        .price-item p {
+            margin: 0;
+            color: var(--muted);
+            font-size: .84rem;
+        }
+
+
+        .price {
+            flex-shrink: 0;
+            color: var(--rose-dark);
+            font-weight: 700;
+        }
+
+
+        .price-note {
+            margin-top: 24px;
+            color: var(--muted);
+            font-size: .84rem;
+        }
+
+
+        /* Galerija */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr .85fr;
+            grid-template-rows: 230px 230px;
+            gap: 16px;
+        }
+
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+            border-radius: 18px;
+            background: var(--cream);
+        }
+
+
+        .gallery-item:first-child {
+            grid-row: span 2;
+        }
+
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .5s ease;
+        }
+
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+
+        .gallery-caption {
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            left: 12px;
+            padding: 10px 13px;
+            border: 1px solid rgba(255, 255, 255, .35);
+            border-radius: 11px;
+            color: white;
+            background: rgba(35, 25, 22, .55);
+            backdrop-filter: blur(8px);
+            font-size: .82rem;
+            text-align: center;
+        }
+
+
+        /* Recenzije */
+        .reviews {
+            background: var(--cream);
+        }
+
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+
+        .review-card {
+            padding: 28px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--paper);
+        }
+
+
+        .review-stars {
+            margin-bottom: 15px;
+            color: var(--rose-dark);
+            letter-spacing: .16em;
+        }
+
+
+        .review-card blockquote {
+            margin: 0 0 20px;
+            color: var(--muted);
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+
+        .review-author {
+            font-size: .84rem;
+            font-weight: 700;
+        }
+
+
+        .review-placeholder {
+            margin-top: 22px;
+            color: var(--muted);
+            font-size: .82rem;
+        }
+
+
+        /* Poziv na zakazivanje */
+        .booking {
+            padding-top: 0;
+        }
+
+
+        .booking-panel {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            align-items: center;
+            gap: 30px;
+            overflow: hidden;
+            padding: clamp(30px, 5vw, 58px);
+            border-radius: 28px;
+            color: white;
+            background: var(--ink);
+        }
+
+
+        .booking-panel::after {
+            content: "S";
+            position: absolute;
+            right: 23%;
+            top: -105px;
+            color: rgba(255, 255, 255, .045);
+            font-family: var(--serif);
+            font-size: 22rem;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+
+        .booking-panel .eyebrow {
+            color: #e4b7b0;
+        }
+
+
+        .booking-panel h2 {
+            position: relative;
+            z-index: 1;
+            max-width: 650px;
+            margin: 16px 0 12px;
+        }
+
+
+        .booking-panel p {
+            position: relative;
+            z-index: 1;
+            max-width: 590px;
+            margin-bottom: 0;
+            color: #d8c9c4;
+            font-size: .92rem;
+        }
+
+
+        .booking-panel .button {
+            position: relative;
+            z-index: 1;
+            white-space: nowrap;
+            color: var(--ink);
+            background: var(--paper);
+        }
+
+
+        .booking-panel .button:hover {
+            background: #f0dcd6;
+        }
+
+
+        /* Kontakt i lokacija */
+        .contact {
+            background: var(--cream);
+        }
+
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: .8fr 1fr;
+            gap: 60px;
+        }
+
+
+        .contact-info h2 {
+            margin-top: 16px;
+        }
+
+
+        .contact-info > p {
+            max-width: 420px;
+            color: var(--muted);
+        }
+
+
+        .contact-list {
+            display: grid;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            border-radius: 50%;
+            color: var(--rose-dark);
+            background: #eadbd2;
+        }
+
+
+        .contact-item small {
+            display: block;
+            margin-bottom: 3px;
+            color: var(--muted);
+            font-size: .75rem;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+        }
+
+
+        .contact-item a,
+        .contact-item address {
+            font-style: normal;
+            text-decoration: none;
+            font-weight: 600;
+            overflow-wrap: anywhere;
+        }
+
+
+        .contact-item a:hover {
+            color: var(--rose-dark);
+        }
+
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-weight: bold;
+            gap: 12px;
+            border-top: 2px solid var(--line);
+            color: rgba(143, 78, 63, 0.7);
+            border-color: rgba(143, 78, 63, 0.7);
+            padding-top: 20px;
+            margin-top: 30px;
+        }
+
+
+        .dugmeinsta{
+            padding: 30px 14px;
+            border: 2px solid var(--line);
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: .84rem;
+            font-weight: 600;
+
+        }
+
+
+        .social-links a {
+            padding: 9px 14px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: .84rem;
+            font-weight: 600;
+        }
+
+
+        .social-links a:hover {
+            color: var(--rose-dark);
+            border-color: var(--rose-dark);
+            background: var(--paper);
+        }
+
+
+        .map-card {
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--paper);
+            box-shadow: var(--shadow);
+        }
+
+
+        .map-frame {
+            width: 100%;
+            height: 320px;
+            display: block;
+            border: 0;
+            background: #e9e8dc;
+        }
+
+
+        .map-card-copy {
+            padding: 25px;
+        }
+
+
+        .map-card h3 {
+            margin: 0 0 6px;
+            font-size: 1.5rem;
+        }
+
+
+        .map-card p {
+            margin-bottom: 18px;
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+
+        /* Podnožje */
+        footer {
+            padding: 25px 0;
+            color: #d8c9c4;
+            background: #261e1c;
+        }
+
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+        .footer-inner p {
+            margin: 0;
+            font-size: .8rem;
+        }
+
+
+        .footer-brand {
+            color: white;
+            font-family: var(--serif);
+            font-size: 1.05rem;
+        }
+
+
+        .back-to-top {
+            position: fixed;
+            z-index: 50;
+            right: 22px;
+            bottom: 22px;
+            width: 46px;
+            height: 46px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            color: var(--ink);
+            background: var(--paper);
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+        }
+
+
+        .back-to-top.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+
+        /* Tablet i manji laptopovi */
+        @media (max-width: 950px) {
+            .nav-links {
+                gap: 12px;
+            }
+
+
+            .nav-links a {
+                font-size: .8rem;
+            }
+
+
+            .welcome-grid {
+                gap: 35px;
+            }
+
+
+            .welcome-visual {
+                min-height: 420px;
+            }
+
+
+            .services-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+
+            .reviews-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+
+            .review-card:last-child {
+                grid-column: 1 / -1;
+            }
+
+
+            .gallery-grid {
+                grid-template-rows: 190px 190px;
+            }
+
+
+            .contact-grid {
+                gap: 35px;
+            }
+        }
+
+
+        /* Telefoni */
+        @media (max-width: 720px) {
+            html {
+                scroll-padding-top: 82px;
+            }
+
+
+            .container {
+                width: min(var(--container), calc(100% - 32px));
+            }
+
+
+            .nav-wrap {
+                min-height: 72px;
+            }
+
+
+            .menu-toggle {
+                display: block;
+            }
+
+
+            .nav-links {
+                position: absolute;
+                top: calc(100% + 1px);
+                left: 0;
+                right: 0;
+                display: none;
+                align-items: stretch;
+                gap: 0;
+                padding: 10px 16px 18px;
+                border-bottom: 1px solid var(--line);
+                background: var(--paper);
+                box-shadow: 0 16px 22px rgba(48, 38, 36, .08);
+            }
+
+
+            .nav-links.is-open {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+            .nav-links a {
+                padding: 13px 8px;
+                font-size: .95rem;
+            }
+
+
+            .nav-links .nav-cta {
+                margin-top: 7px;
+                text-align: center;
+            }
+            .logo {
+                width: 50px;
+                border-radius: 50%;
+            }
+
+
+            .section {
+                padding: 72px 0;
+            }
+
+
+            .welcome {
+                min-height: auto;
+                padding: 42px 0 52px;
+            }
+
+
+            .welcome-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+
+            .welcome-copy {
+                padding: 0;
+            }
+
+
+            .welcome h1 {
+                margin: 16px 0;
+                font-size: clamp(3rem, 13vw, 4.5rem);
+            }
+
+
+            .welcome-copy > p {
+                font-size: .98rem;
+            }
+
+
+            .welcome-visual {
+                min-height: 390px;
+            }
+
+
+            .welcome-image {
+                inset: 0 15px 0 8px;
+                border-radius: 45% 45% 18px 18px;
+            }
+
+
+            .welcome-stamp {
+                right: 0;
+                bottom: 20px;
+                width: 112px;
+                height: 112px;
+            }
+
+
+            .welcome-stamp strong {
+                font-size: 1.55rem;
+            }
+
+
+            .benefit-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+
+            .benefit {
+                justify-content: flex-start;
+            }
+
+
+            .section-heading {
+                margin-bottom: 30px;
+            }
+
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+
+            .service-card {
+                padding: 24px;
+            }
+
+
+            .service-number {
+                margin-bottom: 15px;
+            }
+
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+
+            .about-photo {
+                min-height: 340px;
+            }
+
+
+            .about-photo img {
+                height: 340px;
+            }
+
+
+            .price-list {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 260px 170px 170px;
+                gap: 10px;
+            }
+
+
+            .gallery-item:first-child {
+                grid-column: span 2;
+                grid-row: auto;
+            }
+
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .review-card:last-child {
+                grid-column: auto;
+            }
+
+
+            .booking {
+                padding-top: 0;
+            }
+
+
+            .booking-panel {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                padding: 30px 24px;
+            }
+
+
+            .booking-panel .button {
+                justify-self: start;
+                white-space: normal;
+            }
+
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+
+            .map-frame {
+                height: 270px;
+            }
+
+
+            .map-card-copy {
+                padding: 20px;
+            }
+
+
+            .footer-inner {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+
+            .back-to-top {
+                right: 14px;
+                bottom: 14px;
+            }
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- ZAGLAVLJE I NAVIGACIJA -->
+
+    <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#pocetna" aria-label="Modni studio Sneža — početna strana">
+        <img class="logo" src="slike/logo.jpg" alt="Logo Modnog studija Sneža">
+        <span class="brand-copy"><strong>Modni studio Sneža</strong><small>Ljepota u svakom detalju</small></span>
+      </a>
+      
+      <nav class="nav-links" id="main-nav" aria-label="Glavna navigacija">
+        <a class="nav-pocetna" href="#pocetna">Početna</a>
+        <a class="nav-usluge" href="#usluge">Usluge</a>
+        <a class="nav-o-nama" href="#o-nama">O nama</a>
+        <a class="nav-galerija" href="#galerija">Galerija</a>
+        <a class="nav-cta" href="#kontakt">Zakažite termin ↗</a>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+
+    <main>
+        <!-- UVODNA STRANICA -->
+        <section class="welcome" id="pocetna">
+            <div class="container welcome-grid">
+                <div class="welcome-copy">
+                    <span class="eyebrow">Modni studio · Danilovgrad</span>
+
+
+                    <h1>Vaša kosa.<br>Vaš stil.<br><em>Vaš sjaj.</em></h1>
+
+
+                    <p>
+                        Dobro došli u Modni studio Sneža — mjesto gdje se njegovan izgled
+                        susrijeće sa stilom, a svaka frizura počinje razgovorom o vašim željama.
+                        <!-- OVDJE IZMIJENITE UVODNI TEKST PO ŽELJI -->
+                    </p>
+
+
+                    <div class="welcome-actions">
+                        <a class="button button-primary" href="#usluge">Otkrijte naše usluge <span aria-hidden="true">↗</span></a>
+                        <a class="button button-secondary" href="#o-nama">Upoznajte Snežu</a>
+                    </div>
+
+
+                    <div class="welcome-note">
+                        <span aria-hidden="true">✦ ✦ ✦</span>
+                        <span>Pažnja prema detaljima i vašim željama</span>
+                    </div>
+                </div>
+
+
+                <div class="welcome-visual">
+                    <div class="welcome-image">
+                        <!-- ZAMIJENITE LINK ISPOD SVOJOM FOTOGRAFIJOM -->
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85"
+                             alt="Inspiracija za frizuru i njegovan izgled"
+                             fetchpriority="high">
+                    </div>
+
+
+                    <div class="welcome-stamp" aria-label="Ljepota u svakom detalju">
+                        <strong>SS</strong>
+                        <small>Ljepota u svakom detalju</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- GLAVNE PREDNOSTI -->
+        <section class="benefits" aria-label="Naš pristup">
+            <div class="container benefit-grid">
+                <div class="benefit">
+                    <span class="benefit-icon" aria-hidden="true">✧</span>
+                    <div>
+                        <strong>Stil po vašoj mjeri</strong>
+                        <small>Izgled koji odgovara vama</small>
+                    </div>
+                </div>
+
+
+                <div class="benefit">
+                    <span class="benefit-icon" aria-hidden="true">♡</span>
+                    <div>
+                        <strong>Pažnja i posvećenost</strong>
+                        <small>Vaše želje su na prvom mjestu</small>
+                    </div>
+                </div>
+
+
+                <div class="benefit">
+                    <span class="benefit-icon" aria-hidden="true">✂</span>
+                    <div>
+                        <strong>Njega i oblikovanje</strong>
+                        <small>Za svaki dan i posebne prilike</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- USLUGE -->
+        <section class="section services" id="usluge">
+            <div class="container">
+                <div class="section-heading center">
+                    <span class="eyebrow">Naša ponuda</span>
+                    <h2>Pronađite svoj stil</h2>
+                    <p class="section-intro">
+                        Od osvježavanja postojeće frizure do promjene koja se pamti —
+                        zajedno biramo izgled u kojem ćete se osjećati lijepo i samouvjereno.
+                    </p>
+                </div>
+
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <span class="service-number">01 /</span>
+                        <h3>Šišanje i oblikovanje</h3>
+                        <p>Oblik koji prati vašu kosu, crte lica i lični stil.</p>
+                        <a class="service-link" href="#kontakt">Zakažite termin ↗</a>
+                    </article>
+
+
+                    <article class="service-card">
+                        <span class="service-number">02 /</span>
+                        <h3>Feniranje</h3>
+                        <p>Glatka, lepršava ili voluminozna frizura za njegovan izgled.</p>
+                        <a class="service-link" href="#kontakt">Zakažite termin ↗</a>
+                    </article>
+
+
+                    <article class="service-card">
+                        <span class="service-number">03 /</span>
+                        <h3>Farbanje i osvježavanje boje</h3>
+                        <p>Razgovarajmo o nijansi i rezultatu koji želite da postignete.</p>
+                        <a class="service-link" href="#kontakt">Zakažite termin ↗</a>
+                    </article>
+
+
+                    <article class="service-card">
+                        <span class="service-number">04 /</span>
+                        <h3>Pramenovi i promjena izgleda</h3>
+                        <p>Za suptilnu dimenziju, svježinu i novu energiju vaše frizure.</p>
+                        <a class="service-link" href="#kontakt">Zakažite termin ↗</a>
+                    </article>
+
+
+                    <article class="service-card">
+                        <span class="service-number">05 /</span>
+                        <h3>Svečane frizure</h3>
+                        <p>Frizure za proslave, važne događaje i posebne trenutke.</p>
+                        <a class="service-link" href="#kontakt">Zakažite termin ↗</a>
+                    </article>
+
+
+                    <article class="service-card">
+                        <span class="service-number">06 /</span>
+                        <h3>Njega kose</h3>
+                        <p>Posavjetujte se sa nama o njezi prilagođenoj vašoj kosi.</p>
+                        <a class="service-link" href="#kontakt">Zakažite termin ↗</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- -DOBRO DOSLI -->
+        <section class="section about" id="o-nama">
+            <div class="container about-grid">
+                <div class="about-photo">
+                    <!-- ZAMIJENITE SVOJOM FOTOGRAFIJOM SALONA ILI VLASNICE -->
+                    <img src="slike/sl1.jpg";
+                         alt="Detalji iz svijeta njege kose"
+                         loading="lazy">
+
+
+                    <div class="photo-caption">Mali detalji. Velika razlika.</div>
+                </div>
+
+
+                <div class="about-copy">
+                    <span class="eyebrow">Dobro došli</span>
+                    <h2>Mjesto za vaš novi sjaj.</h2>
+
+
+                    <p>
+                        U Modnom studiju Sneža vjerujemo da dobra frizura nije samo pitanje izgleda,
+                        već i osjećaja sa kojim izlazite iz salona.
+                    </p>
+
+
+                    <p>
+                        Važno nam je da saslušamo šta želite, upoznamo se sa vašim stilom
+                        i zajedno pronađemo rješenje koje vam odgovara.
+                        <!-- OVDJE DODAJTE STVARNU PRIČU O SNEŽI, ISKUSTVU I SALONU -->
+                    </p>
+
+
+                    <ul class="about-list">
+                        <li>Dogovor prije promjene — bez iznenađenja.</li>
+                        <li>Pristup prilagođen vašim željama i tipu kose.</li>
+                        <li>Frizure za svaki dan i posebne prilike.</li>
+                    </ul>
+
+
+                    <a class="button button-primary" href="tel:+38269732229">Razgovarajmo o vašoj frizuri ↗</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CJENOVNIK -->
+        <section class="section" id="cjenovnik">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Cijene usluga</span>
+                    <h2>Jednostavno i pregledno</h2>
+                    <p class="section-intro">
+                        Ovdje unesite aktuelne cijene. Ako cijena zavisi od dužine ili gustine kose,
+                        navedite da se konačan iznos dogovara prilikom konsultacije.
+                    </p>
+                </div>
+
+
+                <div class="price-list">
+                    <div class="price-item">
+                        <div>
+                            <h3>Šišanje i oblikovanje</h3>
+                            <p>Opis usluge po želji</p>
+                        </div>
+                        <span class="price">od __ €</span>
+                    </div>
+
+
+                    <div class="price-item">
+                        <div>
+                            <h3>Feniranje</h3>
+                            <p>Opis usluge po želji</p>
+                        </div>
+                        <span class="price">od __ €</span>
+                    </div>
+
+
+                    <div class="price-item">
+                        <div>
+                            <h3>Farbanje</h3>
+                            <p>Cijena prema dogovoru</p>
+                        </div>
+                        <span class="price">od __ €</span>
+                    </div>
+
+
+                    <div class="price-item">
+                        <div>
+                            <h3>Pramenovi</h3>
+                            <p>Cijena prema dogovoru</p>
+                        </div>
+                        <span class="price">od __ €</span>
+                    </div>
+
+
+                    <div class="price-item">
+                        <div>
+                            <h3>Svečana frizura</h3>
+                            <p>Za proslave i posebne prilike</p>
+                        </div>
+                        <span class="price">od __ €</span>
+                    </div>
+
+
+                    <div class="price-item">
+                        <div>
+                            <h3>Tretman njege kose</h3>
+                            <p>Prema potrebama kose</p>
+                        </div>
+                        <span class="price">od __ €</span>
+                    </div>
+                </div>
+
+
+                <p class="price-note">
+                    * Cijene su mjesta za unos, a ne potvrđen cjenovnik. Prije objavljivanja zamijenite ih
+                    stvarnim cijenama ili uklonite ovu sekciju ako salon ne želi javno da prikazuje cijene.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- GALERIJA -->
+        <section class="section gallery" id="galerija">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Inspiracija</span>
+                    <h2>Stil koji govori za sebe</h2>
+                    <p class="section-intro">
+                        Pogledajte inspiraciju za svoj sljedeći izgled.
+                        Najbolje je da ove fotografije zamijenite stvarnim radovima salona.
+                    </p>
+                </div>
+
+
+                <div class="gallery-grid">
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1000&q=85"
+                             alt="Inspiracija za elegantnu frizuru" loading="lazy">
+                        <figcaption class="gallery-caption">Elegancija u pokretu</figcaption>
+                    </figure>
+
+
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=700&q=85"
+                             alt="Inspiracija za moderan beauty izgled" loading="lazy">
+                        <figcaption class="gallery-caption">Prirodna ljepota</figcaption>
+                    </figure>
+
+
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=700&q=85"
+                             alt="Beauty inspiracija za novu frizuru" loading="lazy">
+                        <figcaption class="gallery-caption">Novi izgled</figcaption>
+                    </figure>
+
+
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=700&q=85"
+                             alt="Inspiracija za dotjeran izgled" loading="lazy">
+                        <figcaption class="gallery-caption">Za posebne trenutke</figcaption>
+                    </figure>
+
+
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1512316609839-ce289d3eba0a?auto=format&fit=crop&w=700&q=85"
+                             alt="Inspiracija za ženstven i elegantan stil" loading="lazy">
+                        <figcaption class="gallery-caption">Vaš stil, vaš izbor</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- RECENZIJE — ZAMIJENITI STVARNIM UTISCIMA -->
+        <section class="section reviews" id="recenzije">
+            <div class="container">
+                <div class="section-heading center">
+                    <span class="eyebrow">Riječi naših klijenata</span>
+                    <h2>Vaše povjerenje nam znači</h2>
+                    <p class="section-intro">
+                        Ovdje dodajte stvarne recenzije klijenata, uz njihovu dozvolu.
+                    </p>
+                </div>
+
+
+                <div class="reviews-grid">
+                    <article class="review-card">
+                        <div class="review-stars" aria-label="Ocjena pet od pet">★★★★★</div>
+                        <blockquote>
+                            „Ovdje unesite stvaran utisak klijenta o usluzi i iskustvu u salonu.“
+                        </blockquote>
+                        <div class="review-author">Ime klijenta</div>
+                    </article>
+
+
+                    <article class="review-card">
+                        <div class="review-stars" aria-label="Ocjena pet od pet">★★★★★</div>
+                        <blockquote>
+                            „Ovdje unesite drugi stvaran komentar koji opisuje iskustvo klijenta.“
+                        </blockquote>
+                        <div class="review-author">Ime klijenta</div>
+                    </article>
+
+
+                    <article class="review-card">
+                        <div class="review-stars" aria-label="Ocjena pet od pet">★★★★★</div>
+                        <blockquote>
+                            „Ovdje unesite treći stvaran utisak. Ako ga nemate, uklonite ovu karticu.“
+                        </blockquote>
+                        <div class="review-author">Ime klijenta</div>
+                    </article>
+                </div>
+
+
+                <p class="review-placeholder">
+                    Napomena: prikazani tekstovi i zvjezdice su samo primjeri za dizajn.
+                    Nemojte ih objaviti kao stvarne recenzije. Zamijenite ih provjerenim utiscima
+                    ili uklonite kartice dok ne prikupite recenzije.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- POZIV NA ZAKAZIVANJE -->
+        <section class="section booking">
+            <div class="container">
+                <div class="booking-panel">
+                    <div>
+                        <span class="eyebrow">Vrijeme je za vas</span>
+                        <h2>Spremni za frizuru u kojoj ćete zablistati?</h2>
+                        <p>Pozovite nas da se dogovorimo oko usluge i slobodnog termina.</p>
+                    </div>
+
+
+                    <a class="button" href="tel:+38269732229">Pozovite 069 732 229 ↗</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- KONTAKT I GOOGLE MAPS -->
+        <section class="section contact" id="kontakt">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <span class="eyebrow">Kontakt</span>
+                    <h2>Posjetite nas</h2>
+                    <p>
+                        Tu smo da odgovorimo na vaša pitanja i pomognemo vam da odaberete
+                        uslugu i termin.
+                    </p>
+
+
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <span class="contact-icon" aria-hidden="true">⌖</span>
+                            <div>
+                                <small>Adresa</small>
+                                <address>Glavica br. 6, Danilovgrad, Crna Gora</address>
+                            </div>
+                        </div>
+
+
+                        <div class="contact-item">
+                            <span class="contact-icon" aria-hidden="true">☎</span>
+                            <div>
+                                <small>Telefon</small>
+                                <a href="tel:+38269732229">069 732 229</a>
+                            </div>
+                        </div>
+
+
+                        <div class="contact-item">
+                            <span class="contact-icon" aria-hidden="true">✉</span>
+                            <div>
+                                <small>E-mail</small>
+                                <a href="mailto:sneza.vujovic123@gmail.com">sneza.vujovic123@gmail.com</a>
+                            </div>
+                        </div>
+
+
+                        <div class="contact-item">
+                            <span class="contact-icon" aria-hidden="true">◷</span>
+                            <div>
+                                <small>Radno vrijeme</small>
+                                <address>
+                                    Utorak–Nedelja: 08:00-15:00<br>
+                                    Ponedeljak: Zatvoreno
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="social-links">
+                        <!-- ZAMIJENITE # LINKOVIMA STVARNIH PROFILA ILI UKLONITE DUGME -->
+                        <a class="dugmeinsta" href="https://www.instagram.com/modni_studio_sneza/?hl=en" 
+                            aria-label="Instagram profil salona">Instagram ↗</a>
+                        <!--<a href="#" aria-label="Facebook profil salona">Facebook ↗</a>-->
+                    </div>
+                </div>
+
+
+                <div class="map-card">
+                    <!-- Mapa je okvirna pretraga adrese; provjerite da li označava tačnu lokaciju salona -->
+                    <iframe
+                        class="map-frame"
+                        src="https://www.google.com/maps?q=Modni%20studio%20Sne%C5%BEa%2C%20Glavica%206%2C%20Danilovgrad%2C%20Montenegro&output=embed"
+                        title="Google mapa — Modni studio Sneža, Danilovgrad"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+
+
+                    <div class="map-card-copy">
+                        <h3>Modni studio Sneža</h3>
+                        <p>Glavica br. 6 · Danilovgrad</p>
+                        <a class="button button-primary"
+                           href="https://www.google.com/maps/search/?api=1&query=Modni%20studio%20Sne%C5%BEa%2C%20Glavica%206%2C%20Danilovgrad"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Pronađite nas na mapi ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- PODNOŽJE -->
+    <footer>
+        <div class="container footer-inner">
+            <span class="footer-brand">Modni studio Sneža</span>
+            <p>© <span id="current-year">2026</span> Modni studio Sneža. Sva prava zadržana.</p>
+            <p>Ljepota u svakom detalju.</p>
+        </div>
+    </footer>
+
+
+    <!-- DUGME ZA POVRATAK NA VRH -->
+    <a class="back-to-top" href="#pocetna" aria-label="Vrati se na vrh stranice" title="Na vrh">↑</a>
+
+
+
+
+
+
+
+    <script>
+
+
+        const linkovi = document.querySelectorAll('.nav-pocetna, .nav-usluge, .nav-o-nama, .nav-galerija, .nav-cta');
+
+        const sekcije = document.querySelectorAll('#pocetna, #usluge, #o-nama, #galerija, #kontakt');
+
+        window.addEventListener('scroll', function() {
+            let aktivnaSekcija = '';
+
+            sekcije.forEach(function(sekcija) {
+            const vrh = sekcija.offsetTop - 150;
+
+            if (window.scrollY >= vrh) {
+                aktivnaSekcija = sekcija.id;
+            }
+        
+            });
+
+            linkovi.forEach(function(link) {
+                link.classList.remove('active');
+
+                if (link.getAttribute('href') === '#' + aktivnaSekcija) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+
+        // Mobilni navigacioni meni
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainNav = document.querySelector("#main-nav");
+
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener("click", () => {
+            const isOpen = mainNav.classList.toggle("is-open");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute("aria-label", isOpen ? "Zatvori navigacioni meni" : "Otvori navigacioni meni");
+            } 
+        );
+
+            mainNav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+            mainNav.classList.remove("is-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Otvori navigacioni meni");
+            });
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                mainNav.classList.remove("is-open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Otvori navigacioni meni");
+            }
+        });
+        }
+
+    // Automatski prikaz tekuće godine u podnožju
+    const yearElement = document.querySelector("#current-year");
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
+    </script>
+
+</body>
+</html>
