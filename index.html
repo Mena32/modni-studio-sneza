@@ -1,82 +1,66 @@
 <!DOCTYPE html>
 <html lang="cnr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modni studio Sneža u Danilovgradu — frizerske usluge, njega kose i stil za svaki dan i posebne prilike. Kontaktirajte nas i zakažite svoj termin.">
+  <meta name="theme-color" content="#f7f1eb">
+  <title>Modni studio Sneža | Frizerski salon u Danilovgradu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #f7f1eb;
+      --paper: #fffdf9;
+      --rose: #c98783;
+      --rose-dark: #995d5b;
+      --ink: #302624;
+      --muted: #786b66;
+      --line: #e8dcd4;
+      --sage: #a5ad98;
+      --shadow: 0 18px 45px rgba(69, 43, 36, .10);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --radius: 22px;
+      --container: 1160px;
+    }
 
+   * {
+        box-sizing: border-box;
+    }
 
-    <meta name="description" content="Modni studio Sneža u Danilovgradu — frizerske usluge, njega kose i stil za svaki dan i posebne prilike. Kontaktirajte nas i zakažite svoj termin.">
-    <meta name="theme-color" content="#f7f1eb">
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+    }
 
+    body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+    }
 
-    <title>Modni studio Sneža | Frizerski salon u Danilovgradu</title>
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-
-    <style>
-        :root {
-            --cream: #f7f1eb;
-            --paper: #fffdf9;
-            --rose: #c98783;
-            --rose-dark: #995d5b;
-            --ink: #302624;
-            --muted: #786b66;
-            --line: #e8dcd4;
-            --sage: #a5ad98;
-            --shadow: 0 18px 45px rgba(69, 43, 36, .10);
-            --serif: "Playfair Display", Georgia, serif;
-            --sans: "DM Sans", Arial, sans-serif;
-            --radius: 22px;
-            --container: 1160px;
-        }
-
-
-        * {
-            box-sizing: border-box;
-        }
-
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 100px;
-        }
-
-
-        body {
-            margin: 0;
-            color: var(--ink);
-            background: var(--paper);
-            font-family: var(--sans);
-            line-height: 1.65;
-            -webkit-font-smoothing: antialiased;
-        }
-
-
-        body.menu-open {
-            overflow: hidden;
-        }
-
+    body.menu-open {
+        overflow: hidden;
+    }
 
         img {
             display: block;
             max-width: 100%;
         }
 
-
         a {
             color: inherit;
         }
-
 
         button,
         a {
             -webkit-tap-highlight-color: transparent;
         }
-
 
         button,
         input,
@@ -84,19 +68,16 @@
             font: inherit;
         }
 
-
         a:focus-visible,
         button:focus-visible {
             outline: 3px solid var(--rose-dark);
             outline-offset: 4px;
         }
 
-
         .container {
             width: min(var(--container), calc(100% - 44px));
             margin-inline: auto;
         }
-
 
         .eyebrow {
             display: inline-flex;
@@ -109,7 +90,6 @@
             text-transform: uppercase;
         }
 
-
         .eyebrow::before {
             content: "";
             width: 28px;
@@ -117,11 +97,9 @@
             background: currentColor;
         }
 
-
         h1, h2, h3, p {
             margin-top: 0;
         }
-
 
         h1, h2, h3 {
             font-family: var(--serif);
@@ -129,121 +107,41 @@
             line-height: 1.12;
         }
 
-
         h2 {
             margin-bottom: 18px;
             font-size: clamp(2.15rem, 4vw, 3.5rem);
             letter-spacing: -.035em;
         }
 
-
         .section-intro {
             max-width: 650px;
             color: var(--muted);
         }
 
-
         .section-heading {
             margin-bottom: 42px;
         }
-
 
         .section-heading.center {
             text-align: center;
         }
 
-
         .section-heading.center .eyebrow {
             justify-content: center;
         }
 
-
         .section-heading.center .section-intro {
             margin-inline: auto;
         }
-
 
         .section {
             padding: 100px 0;
         }
 
 
-        /* Dugmad */
-        .button {
-            display: inline-flex;
-            min-height: 50px;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 13px 21px;
-            border: 1px solid transparent;
-            border-radius: 999px;
-            text-decoration: none;
-            font-size: .9rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: transform .2s ease, background .2s ease, border-color .2s ease;
-        }
+/* Navigacija */
 
-
-        .button:hover {
-            transform: translateY(-2px);
-        }
-
-
-        .button-primary {
-            color: white;
-            background: var(--ink);
-        }
-
-
-        .button-primary:hover {
-            background: var(--rose-dark);
-        }
-
-
-        .button-secondary {
-            border-color: #d7c5bc;
-            background: rgba(255, 255, 255, .45);
-        }
-
-
-        .button-secondary:hover {
-            border-color: var(--rose-dark);
-            background: white;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /* Gornja navigacija */
-        .site-header {
+    .site-header {
             position: sticky;
             top: 0;
             z-index: 100;
@@ -260,7 +158,6 @@
             gap: 28px;
         }
 
-
         .brand {
             display: inline-flex;
             align-items: center;
@@ -268,7 +165,6 @@
             text-decoration: none;
             flex-shrink: 0;
         }
-
 
         .brand-mark {
             width: 44px;
@@ -283,12 +179,10 @@
             font-style: italic;
         }
 
-
         .brand-copy {
             display: grid;
             line-height: 1.15;
         }
-
 
         .brand-copy strong {
             font-family: var(--serif);
@@ -296,7 +190,8 @@
             font-weight: 600;
         }
         
-        /* Skriveni meni po defaultu */
+/* Skriveni meni po defaultu */
+
         .nav-menu {
           position: fixed;
           left: -100%; 
@@ -308,7 +203,6 @@
           transition: 0.3s;
         }
 
-
         .brand-copy small {
             margin-top: 5px;
             color: var(--muted);
@@ -316,7 +210,6 @@
             letter-spacing: .14em;
             text-transform: uppercase;
         }
-
 
         .nav-links {
             font-family: Arial, sans-serif;
@@ -326,7 +219,6 @@
             gap: clamp(14px, 2.2vw, 28px);
         }
 
-
         .nav-links a {
             text-decoration: none;
             font-size: .86rem;
@@ -334,11 +226,9 @@
             transition: color .2s ease;
         }
 
-
         .nav-links a:hover {
             color: var(--rose-dark);
         }
-
 
         .nav-links .nav-cta {
             padding: 12px 18px;
@@ -347,27 +237,24 @@
             border-radius: 999px;
         }
 
-
         .nav-links .nav-cta:hover {
             color: white;
             background: var(--rose-dark);
         }
-        
-        
+
         .logo {
             width: 50px;
             border-radius: 50%;
         }
         
-
         .nav-pocetna, .nav-usluge, .nav-o-nama, .nav-galerija {
             transition: background-color 0.1s ease;
+            text-align: center;
             padding: 10px 9px;
             color: var(--rose-dark);
             background: transparent;
             border-radius: 999px;
         }
-
 
         .nav-pocetna.active, .nav-usluge.active, .nav-o-nama.active, .nav-galerija.active,
         .nav-cta.active {
@@ -379,8 +266,31 @@
             border-radius: 999px;
         }
 
+    .menu-toggle {
+      display: none; width: 44px; height: 44px; padding: 10px;
+      border: 1px solid var(--line); border-radius: 50%; background: transparent; cursor: pointer;
+    }
+    .menu-toggle span { display: block; width: 20px; height: 2px; margin: 4px auto; background: var(--ink); }
 
-        /* Uvodni ekran — sadrži lično predstavljanje i vodi ka sajtu */
+/* Uvodna sekcija */
+
+    /*
+    .hero { overflow: hidden; padding: 58px 0 76px; background: var(--cream); }
+    .hero-grid { display: grid; grid-template-columns: 1fr .92fr; align-items: center; gap: clamp(35px, 7vw, 90px); }
+    .hero-copy { padding: 20px 0; }
+    .hero h1 { max-width: 620px; margin: 20px 0 22px; font-size: clamp(3.2rem, 6.2vw, 5.8rem); letter-spacing: -.055em; }
+    .hero h1 em { color: var(--rose-dark); font-weight: 400; }
+    .hero-copy > p { max-width: 500px; margin-bottom: 30px; color: var(--muted); font-size: 1.05rem; }
+    .button-row { display: flex; flex-wrap: wrap; align-items: center; gap: 13px; }
+    */
+    
+    
+    
+    
+
+
+
+/* Uvodni ekran — sadrži lično predstavljanje i vodi ka sajtu */
         .welcome {
             position: relative;
             min-height: min(760px, calc(100svh - 82px));
@@ -529,12 +439,106 @@
         }
 
 
-        /* Traka sa glavnim prednostima */
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+/* Dugmad */
+
+        .button {
+            display: inline-flex;
+            min-height: 50px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 21px;
+            border: 1px solid transparent;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: .9rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        .button-primary {
+            color: white;
+            background: var(--ink);
+        }
+
+        .button-primary:hover {
+            background: var(--rose-dark);
+        }
+
+        .button-secondary {
+            border-color: #d7c5bc;
+            background: rgba(255, 255, 255, .45);
+        }
+
+        .button-secondary:hover {
+            border-color: var(--rose-dark);
+            background: white;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .hero-note { display: flex; align-items: center; gap: 12px; margin-top: 30px; color: var(--muted); font-size: .82rem; }
+    .note-stars { color: var(--rose-dark); letter-spacing: .12em; font-size: 1rem; }
+    .hero-visual { position: relative; min-height: 490px; }
+    .hero-image {
+      position: absolute; inset: 0 20px 0 25px; overflow: hidden;
+      border-radius: 48% 48% 22px 22px; box-shadow: var(--shadow);
+    }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .hero-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 58%, rgba(34, 22, 19, .28)); }
+    .hero-stamp {
+      position: absolute; z-index: 1; right: 0; bottom: 38px;
+      width: 136px; height: 136px; display: grid; place-content: center; text-align: center;
+      border: 1px solid rgba(255,255,255,.7); border-radius: 50%;
+      color: var(--ink); background: var(--paper); box-shadow: var(--shadow); transform: rotate(8deg);
+    }
+    .hero-stamp span { font-family: var(--serif); font-size: 1.9rem; line-height: 1; }
+    .hero-stamp small { max-width: 90px; margin: 7px auto 0; font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; line-height: 1.4; }
+
+    
+/* Traka sa glavnim prednostima */
         .benefits {
             padding: 25px 0;
             border-bottom: 1px solid var(--line);
         }
-
 
         .benefit-grid {
             display: grid;
@@ -550,7 +554,6 @@
             gap: 13px;
         }
 
-
         .benefit-icon {
             width: 42px;
             height: 42px;
@@ -563,14 +566,12 @@
             font-size: 1.15rem;
         }
 
-
         .benefit strong {
             display: block;
             font-family: var(--serif);
             font-size: 1.03rem;
             font-weight: 600;
         }
-
 
         .benefit small {
             display: block;
@@ -579,14 +580,15 @@
         }
 
 
-        /* Usluge — kartice ostaju jednake širine */
+
+/* Usluge — kartice ostaju jednake širine */
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             align-items: stretch;
             gap: 22px;
         }
-
 
         .service-card {
             min-width: 0;
@@ -600,13 +602,11 @@
             transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
         }
 
-
         .service-card:hover {
             transform: translateY(-5px);
             border-color: #d9b5ae;
             box-shadow: var(--shadow);
         }
-
 
         .service-number {
             display: inline-block;
@@ -617,19 +617,16 @@
             font-style: italic;
         }
 
-
         .service-card h3 {
             margin-bottom: 12px;
             font-size: 1.48rem;
             overflow-wrap: anywhere;
         }
 
-
         .service-card p {
             margin-bottom: 0;
             color: var(--muted);
         }
-
 
         .service-card .service-link {
             margin-top: auto;
@@ -640,18 +637,17 @@
             text-decoration: none;
         }
 
-
         .service-card .service-link:hover {
             text-decoration: underline;
             text-underline-offset: 4px;
         }
 
 
-        /* O salonu */
+/* O salonu */
+
         .about {
             background: #f5eee8;
         }
-
 
         .about-grid {
             display: grid;
@@ -660,13 +656,11 @@
             gap: clamp(40px, 8vw, 100px);
         }
 
-
         .about-photo {
             position: relative;
             min-height: 440px;
             margin-right: 12px;
         }
-
 
         .about-photo img {
             width: 100%;
@@ -675,7 +669,6 @@
             border-radius: var(--radius);
             box-shadow: var(--shadow);
         }
-
 
         .photo-caption {
             position: absolute;
@@ -690,7 +683,6 @@
             font-size: 1.1rem;
         }
 
-
         .about-copy h2 {
             margin-top: 18px;
         }
@@ -700,7 +692,6 @@
             color: var(--muted);
         }
 
-
         .about-list {
             display: grid;
             gap: 12px;
@@ -709,14 +700,12 @@
             list-style: none;
         }
 
-
         .about-list li {
             display: flex;
             align-items: flex-start;
             gap: 11px;
             font-size: .93rem;
         }
-
 
         .about-list li::before {
             content: "✓";
@@ -733,13 +722,13 @@
         }
 
 
-        /* Cjenovnik */
+/* Cjenovnik */
+
         .price-list {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 14px 34px;
         }
-
 
         .price-item {
             display: flex;
@@ -750,7 +739,6 @@
             border-bottom: 1px solid var(--line);
         }
 
-
         .price-item h3 {
             margin-bottom: 5px;
             font-family: var(--sans);
@@ -759,20 +747,17 @@
             line-height: 1.4;
         }
 
-
         .price-item p {
             margin: 0;
             color: var(--muted);
             font-size: .84rem;
         }
 
-
         .price {
             flex-shrink: 0;
             color: var(--rose-dark);
             font-weight: 700;
         }
-
 
         .price-note {
             margin-top: 24px;
@@ -781,14 +766,14 @@
         }
 
 
-        /* Galerija */
+/* Galerija */
+
         .gallery-grid {
             display: grid;
             grid-template-columns: 1.15fr .85fr .85fr;
             grid-template-rows: 230px 230px;
             gap: 16px;
         }
-
 
         .gallery-item {
             position: relative;
@@ -798,11 +783,9 @@
             background: var(--cream);
         }
 
-
         .gallery-item:first-child {
             grid-row: span 2;
         }
-
 
         .gallery-item img {
             width: 100%;
@@ -811,11 +794,9 @@
             transition: transform .5s ease;
         }
 
-
         .gallery-item:hover img {
             transform: scale(1.05);
         }
-
 
         .gallery-caption {
             position: absolute;
@@ -833,18 +814,17 @@
         }
 
 
-        /* Recenzije */
+/* Recenzije */
+
         .reviews {
             background: var(--cream);
         }
-
 
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 20px;
         }
-
 
         .review-card {
             padding: 28px;
@@ -853,13 +833,11 @@
             background: var(--paper);
         }
 
-
         .review-stars {
             margin-bottom: 15px;
             color: var(--rose-dark);
             letter-spacing: .16em;
         }
-
 
         .review-card blockquote {
             margin: 0 0 20px;
@@ -869,12 +847,10 @@
             line-height: 1.6;
         }
 
-
         .review-author {
             font-size: .84rem;
             font-weight: 700;
         }
-
 
         .review-placeholder {
             margin-top: 22px;
@@ -883,11 +859,13 @@
         }
 
 
-        /* Poziv na zakazivanje */
+
+        
+/* Poziv na zakazivanje */
+
         .booking {
             padding-top: 0;
         }
-
 
         .booking-panel {
             position: relative;
@@ -902,7 +880,6 @@
             background: var(--ink);
         }
 
-
         .booking-panel::after {
             content: "S";
             position: absolute;
@@ -915,11 +892,9 @@
             pointer-events: none;
         }
 
-
         .booking-panel .eyebrow {
             color: #e4b7b0;
         }
-
 
         .booking-panel h2 {
             position: relative;
@@ -927,7 +902,6 @@
             max-width: 650px;
             margin: 16px 0 12px;
         }
-
 
         .booking-panel p {
             position: relative;
@@ -938,7 +912,6 @@
             font-size: .92rem;
         }
 
-
         .booking-panel .button {
             position: relative;
             z-index: 1;
@@ -947,17 +920,18 @@
             background: var(--paper);
         }
 
-
         .booking-panel .button:hover {
             background: #f0dcd6;
         }
 
 
-        /* Kontakt i lokacija */
+
+    
+/* Kontakt i lokacija */
+
         .contact {
             background: var(--cream);
         }
-
 
         .contact-grid {
             display: grid;
@@ -965,17 +939,14 @@
             gap: 60px;
         }
 
-
         .contact-info h2 {
             margin-top: 16px;
         }
-
 
         .contact-info > p {
             max-width: 420px;
             color: var(--muted);
         }
-
 
         .contact-list {
             display: grid;
@@ -983,13 +954,11 @@
             margin-top: 30px;
         }
 
-
         .contact-item {
             display: flex;
             align-items: flex-start;
             gap: 14px;
         }
-
 
         .contact-icon {
             width: 44px;
@@ -1002,7 +971,6 @@
             background: #eadbd2;
         }
 
-
         .contact-item small {
             display: block;
             margin-bottom: 3px;
@@ -1012,7 +980,6 @@
             text-transform: uppercase;
         }
 
-
         .contact-item a,
         .contact-item address {
             font-style: normal;
@@ -1021,11 +988,9 @@
             overflow-wrap: anywhere;
         }
 
-
         .contact-item a:hover {
             color: var(--rose-dark);
         }
-
 
         .social-links {
             display: flex;
@@ -1040,7 +1005,6 @@
             margin-top: 30px;
         }
 
-
         .dugmeinsta{
             padding: 30px 14px;
             border: 2px solid var(--line);
@@ -1051,7 +1015,6 @@
 
         }
 
-
         .social-links a {
             padding: 9px 14px;
             border: 1px solid var(--line);
@@ -1061,13 +1024,11 @@
             font-weight: 600;
         }
 
-
         .social-links a:hover {
             color: var(--rose-dark);
             border-color: var(--rose-dark);
             background: var(--paper);
         }
-
 
         .map-card {
             overflow: hidden;
@@ -1077,7 +1038,6 @@
             box-shadow: var(--shadow);
         }
 
-
         .map-frame {
             width: 100%;
             height: 320px;
@@ -1086,17 +1046,14 @@
             background: #e9e8dc;
         }
 
-
         .map-card-copy {
             padding: 25px;
         }
-
 
         .map-card h3 {
             margin: 0 0 6px;
             font-size: 1.5rem;
         }
-
 
         .map-card p {
             margin-bottom: 18px;
@@ -1105,13 +1062,15 @@
         }
 
 
-        /* Podnožje */
+
+
+/* Podnožje */
+
         footer {
             padding: 25px 0;
             color: #d8c9c4;
             background: #261e1c;
         }
-
 
         .footer-inner {
             display: flex;
@@ -1120,19 +1079,16 @@
             gap: 20px;
         }
 
-
         .footer-inner p {
             margin: 0;
             font-size: .8rem;
         }
-
 
         .footer-brand {
             color: white;
             font-family: var(--serif);
             font-size: 1.05rem;
         }
-
 
         .back-to-top {
             position: fixed;
@@ -1155,7 +1111,6 @@
             transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
         }
 
-
         .back-to-top.is-visible {
             opacity: 1;
             visibility: visible;
@@ -1163,47 +1118,43 @@
         }
 
 
-        /* Tablet i manji laptopovi */
+
+
+
+/* Tablet i manji laptopovi */
+
         @media (max-width: 950px) {
             .nav-links {
                 gap: 12px;
             }
 
-
             .nav-links a {
                 font-size: .8rem;
             }
-
 
             .welcome-grid {
                 gap: 35px;
             }
 
-
             .welcome-visual {
                 min-height: 420px;
             }
-
 
             .services-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
-
             .reviews-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
-
 
             .review-card:last-child {
                 grid-column: 1 / -1;
             }
 
-
             .gallery-grid {
                 grid-template-rows: 190px 190px;
             }
-
 
             .contact-grid {
                 gap: 35px;
@@ -1211,27 +1162,26 @@
         }
 
 
-        /* Telefoni */
+
+
+/* Telefoni */
+
         @media (max-width: 720px) {
             html {
                 scroll-padding-top: 82px;
             }
 
-
             .container {
                 width: min(var(--container), calc(100% - 32px));
             }
-
 
             .nav-wrap {
                 min-height: 72px;
             }
 
-
             .menu-toggle {
                 display: block;
             }
-
 
             .nav-links {
                 position: absolute;
@@ -1247,18 +1197,15 @@
                 box-shadow: 0 16px 22px rgba(48, 38, 36, .08);
             }
 
-
             .nav-links.is-open {
                 display: flex;
                 flex-direction: column;
             }
 
-
             .nav-links a {
                 padding: 13px 8px;
                 font-size: .95rem;
             }
-
 
             .nav-links .nav-cta {
                 margin-top: 7px;
@@ -1269,50 +1216,41 @@
                 border-radius: 50%;
             }
 
-
             .section {
                 padding: 72px 0;
             }
-
 
             .welcome {
                 min-height: auto;
                 padding: 42px 0 52px;
             }
 
-
             .welcome-grid {
                 grid-template-columns: 1fr;
                 gap: 28px;
             }
 
-
             .welcome-copy {
                 padding: 0;
             }
-
 
             .welcome h1 {
                 margin: 16px 0;
                 font-size: clamp(3rem, 13vw, 4.5rem);
             }
 
-
             .welcome-copy > p {
                 font-size: .98rem;
             }
-
 
             .welcome-visual {
                 min-height: 390px;
             }
 
-
             .welcome-image {
                 inset: 0 15px 0 8px;
                 border-radius: 45% 45% 18px 18px;
             }
-
 
             .welcome-stamp {
                 right: 0;
@@ -1321,65 +1259,53 @@
                 height: 112px;
             }
 
-
             .welcome-stamp strong {
                 font-size: 1.55rem;
             }
-
 
             .benefit-grid {
                 grid-template-columns: 1fr;
                 gap: 18px;
             }
 
-
             .benefit {
                 justify-content: flex-start;
             }
 
-
             .section-heading {
                 margin-bottom: 30px;
             }
-
 
             .services-grid {
                 grid-template-columns: 1fr;
                 gap: 14px;
             }
 
-
             .service-card {
                 padding: 24px;
             }
 
-
             .service-number {
                 margin-bottom: 15px;
             }
-
 
             .about-grid {
                 grid-template-columns: 1fr;
                 gap: 35px;
             }
 
-
             .about-photo {
                 min-height: 340px;
             }
-
 
             .about-photo img {
                 height: 340px;
             }
 
-
             .price-list {
                 grid-template-columns: 1fr;
                 gap: 4px;
             }
-
 
             .gallery-grid {
                 grid-template-columns: 1fr 1fr;
@@ -1387,27 +1313,22 @@
                 gap: 10px;
             }
 
-
             .gallery-item:first-child {
                 grid-column: span 2;
                 grid-row: auto;
             }
 
-
             .reviews-grid {
                 grid-template-columns: 1fr;
             }
-
 
             .review-card:last-child {
                 grid-column: auto;
             }
 
-
             .booking {
                 padding-top: 0;
             }
-
 
             .booking-panel {
                 grid-template-columns: 1fr;
@@ -1415,35 +1336,29 @@
                 padding: 30px 24px;
             }
 
-
             .booking-panel .button {
                 justify-self: start;
                 white-space: normal;
             }
-
 
             .contact-grid {
                 grid-template-columns: 1fr;
                 gap: 35px;
             }
 
-
             .map-frame {
                 height: 270px;
             }
 
-
             .map-card-copy {
                 padding: 20px;
             }
-
 
             .footer-inner {
                 align-items: flex-start;
                 flex-direction: column;
                 gap: 8px;
             }
-
 
             .back-to-top {
                 right: 14px;
@@ -1466,20 +1381,19 @@
                 transition-duration: .01ms !important;
             }
         }
-    </style>
+
+  </style>
 </head>
-
-
 <body>
-    <!-- ZAGLAVLJE I NAVIGACIJA -->
-
-    <header class="site-header">
+  <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#pocetna" aria-label="Modni studio Sneža — početna strana">
         <img class="logo" src="slike/logo.jpg" alt="Logo Modnog studija Sneža">
         <span class="brand-copy"><strong>Modni studio Sneža</strong><small>Ljepota u svakom detalju</small></span>
       </a>
-      
+      <button class="menu-toggle" type="button" aria-label="Otvori navigacioni meni" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="nav-links" id="main-nav" aria-label="Glavna navigacija">
         <a class="nav-pocetna" href="#pocetna">Početna</a>
         <a class="nav-usluge" href="#usluge">Usluge</a>
@@ -1490,11 +1404,7 @@
     </div>
   </header>
 
-
-
-
-
-    <main>
+  <main>
         <!-- UVODNA STRANICA -->
         <section class="welcome" id="pocetna">
             <div class="container welcome-grid">
@@ -1970,7 +1880,6 @@
         </section>
     </main>
 
-
     <!-- PODNOŽJE -->
     <footer>
         <div class="container footer-inner">
@@ -1985,41 +1894,29 @@
     <a class="back-to-top" href="#pocetna" aria-label="Vrati se na vrh stranice" title="Na vrh">↑</a>
 
 
+  <script>
+    // Mobilni navigacioni meni
+    const linkovi = document.querySelectorAll('.nav-pocetna, .nav-usluge, .nav-o-nama, .nav-galerija, .nav-cta');
+    const sekcije = document.querySelectorAll('#pocetna, #usluge, #o-nama, #galerija, #kontakt');
 
-
-
-
-
-    <script>
-
-
-        const linkovi = document.querySelectorAll('.nav-pocetna, .nav-usluge, .nav-o-nama, .nav-galerija, .nav-cta');
-
-        const sekcije = document.querySelectorAll('#pocetna, #usluge, #o-nama, #galerija, #kontakt');
-
-        window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function() {
             let aktivnaSekcija = '';
-
             sekcije.forEach(function(sekcija) {
             const vrh = sekcija.offsetTop - 150;
-
-            if (window.scrollY >= vrh) {
-                aktivnaSekcija = sekcija.id;
-            }
-        
+                if (window.scrollY >= vrh) {
+                    aktivnaSekcija = sekcija.id;
+                }
             });
 
             linkovi.forEach(function(link) {
                 link.classList.remove('active');
-
                 if (link.getAttribute('href') === '#' + aktivnaSekcija) {
                     link.classList.add('active');
                 }
             });
         });
 
-
-        // Mobilni navigacioni meni
+    // Mobilni navigacioni meni
         const menuToggle = document.querySelector(".menu-toggle");
         const mainNav = document.querySelector("#main-nav");
 
@@ -2048,12 +1945,12 @@
         });
         }
 
+
     // Automatski prikaz tekuće godine u podnožju
     const yearElement = document.querySelector("#current-year");
     if (yearElement) {
       yearElement.textContent = new Date().getFullYear();
     }
-    </script>
-
+  </script>
 </body>
 </html>
